@@ -88,4 +88,10 @@ h3 {
     transition-duration:0.9s;
 }
 
+.contactPic{
+    float:right;
+    width:100%;
+    padding: 10px;
+}
+
 
