@@ -30,9 +30,9 @@ li a{
     text-decoration: none;
 }
 
-li a:hover {
-    background-color: #B4DAD2;
-    transition-duration:0.4s;
+li a:hover{
+    background-color: rgb(199,222, 191);;
+    transition-duration:1.5s;
 }
 
 a, a:visited {
@@ -46,14 +46,20 @@ a:hover {
 }
 
 a:active{
-    color:#C0E1DA;
+    color:rgb(199,222, 191);;
 }
 
 h3 {
     text-align: left;
 }
 
-#box {
+video:hover{
+    box-shadow: 2px 2px 10px gray;
+    transition-duration: 2s;
+}
+
+
+#box, #box2 {
     background-color: white;
     width:75%;
     padding:8px;
@@ -94,4 +100,58 @@ h3 {
     padding: 10px;
 }
 
+#progress-bar {
+  border-radius: 30px;
+  width: 50%;
+  height: 10px;
+  position: relative;
+  background-color:rgb(226, 226, 226);
+}
 
+.my-bar {
+    background-color:  rgb(199,222, 191);
+    max-width: width;
+    height: 8px;
+    position: absolute;
+    border-radius: 30px;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .box:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .parallax {
+    /* The image used */
+    background-image: url("DSC06617e.jpg");
+  
+    /* Set a specific height */
+    height: 300px;
+    width: 100%;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #slideBox1, #slideBox2, #slideBox3{
+    display: none;
+    padding: 20px;
+  }
+
+  .rotated {
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -moz-transform: rotate(90deg); /* Firefox */
+    -webkit-transform: rotate(90deg); /* Safari and Chrome */
+    -o-transform: rotate(90deg); /* Opera */
+  }

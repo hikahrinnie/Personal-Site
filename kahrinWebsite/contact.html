@@ -11,14 +11,12 @@
 
 <br> 
         <div id="navMenu"> 
-
                 <ul>
-                    <br style=“height:800px”;></br>
-                    <li><a href="main.html">Home</a></li>
+                    <br style=“height:800px”;><br>
                     <li><a href="personal.html">About Me</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="gallery.html">Photography</a></li>
-        
+                    <li><a href="contact.html">Contact Me</a></li>
                 </ul>
             </div>
             <h1>Kahrin at a Glance</h1>
@@ -28,17 +26,51 @@
 
                 <img name="contactPic" src="ValentinesEdit3.jpg" alt="pic four" style="width:45%">
 
+
                 <form action="/action_page.php">
-                    First Name:</br> <input type="text" name="fname" required></form>
-                    Last Name:</br> <input type="text" name="lname" required></br>
-                    Subject: </br> <input type="text" name="eSubject" required></br>
-                    Message:</br> <input type="text" placeholder="Enter your email message" name="eMessage" maxlength="500px" size="50px" required ></br></br>
+                    First Name:<br> <input type="text" name="fname" required><br>
+                    Last Name:<br> <input type="text" name="lname" required><br>
+                    Subject: <br> <input type="text" name="eSubject" required><br>
+                    Message:<br> <input type="text" placeholder="Enter your email message" name="eMessage" maxlength="500px" size="50px" required ><br><br>
                     <input type="submit" value="Submit">
                 </form>
 
-                <br style=“height:800px”;></br></br>
-            Click here for a copy of my Resume.
+        <!---use names in this as variables to save the messages------>
+
+            <br style=“height:800px”;><br><br>
+            Click <a href="Kahrin Huggins-Professional Resume 2020.pdf" download="Kahrin Huggins Resume"> here</a> for a copy of my Resume.
             </div>
+            <div class="parallax"></div>
+
+            <script type="text/javascript">
+                var eSubject = document.getElementByName("eSubject");
+                var eText = document.getElementsByName("eMessage";)
+
+                var nodemailer = require('nodemailer');
+
+                var transporter = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth: {
+                        user: 'kahbri14@gmail.com',
+                        pass: 'Brook96lyn'
+                    }
+                });
+
+                var mailOptions = {
+                    from: 'sitemessenger@mail.com',
+                    to: 'kahrinhuggins@gmail.com',
+                    subject: eSubject,
+                    text: eText
+                };
+
+                transporter.sendMail(mailOptions, function(error,info){
+                    if(error){
+                        console.log(error);
+                    }else{
+                        console.log('Email sent: ' + info.response);
+                    }
+                });
+            </script>
 
 
 </body>
