@@ -2,61 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="stylesheet" type="text/css" href="mainStyle.css">
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <script src="js/animations.js"></script>
     <title>About Me</title>
 </head>
 <body>  
-    <div id="navMenu"> 
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 
-        <ul>
-            <br style=“height:800px”;></br>
-            <li><a href="main.html">Home</a></li>
-            <li><a href="personal.html">About Me</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="gallery.html">Photography</a></li>
+    <script src="animations.js"></script>
 
-        </ul>
-    </div>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+                <a href="personal.html">About Me</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="gallery.html">Photography</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
+    </div> 
+     
 
     <h1>Kahrin at a Glance</h1>
 
 
     <div id="box">
-
-        <p class="infoBox">
-
-                <h3>Skills</h3>
+            <div class="column">
+                <h3>Skills</h3> 
                 <h4>Computer Languages</h4>
-                Java</br>
-                Python</br>
-                HTML/CSS</br>
-                JavaScript</br>
-                SQL</br>
-                C</br>
+                        
+                Java <div id="progress-bar"><div class="my-bar" style="width: 75%;"></div></div><br>
+                Python <div id="progress-bar"><div class="my-bar"style="width: 60%;"></div></div><br>
+                HTML/CSS <div id="progress-bar"><div class="my-bar"style="width: 65%;"></div></div><br>
+                JavaScript <div id="progress-bar"><div class="my-bar"style="width: 60%;"></div></div><br>
+                jQuery <div id="progress-bar"><div class="my-bar"style="width: 30%;"></div></div><br>
+                Angular Js <div id="progress-bar"><div class="my-bar"style="width: 20%;"></div></div><br>
+                React Js <div id="progress-bar"><div class="my-bar"style="width: 20%;"></div></div><br>
+                PHP <div id="progress-bar"><div class="my-bar"style="width: 40%;"></div></div><br>
+                SQL <div id="progress-bar"><div class="my-bar"style="width: 40%;"></div></div><br>
 
-            <br style=“height:600px”;></br>
+            </div>
+
+            <div class="column">
+                <br><br>
+                <h4>Development Tools/Content Management Systems</h4>
+                Node.js <div id="progress-bar"><div class="my-bar"  style="width: 40%;"></div></div><br>
+                Git/Github <div id="progress-bar"><div class="my-bar" style="width: 45%;"></div></div><br>
+                Wordpress <div id="progress-bar"><div class="my-bar" style="width: 70%;"></div></div><br>
+                Squarespace <div id="progress-bar"><div class="my-bar" style="width: 80%;"></div></div><br>
+                Shopify <div id="progress-bar"><div class="my-bar" style="width: 60%;"></div></div><br>
+
+
+                <h4>Other Programs</h4>
+                Adobe Lightroom<div id="progress-bar"><div class="my-bar"style="width: 50%;"></div></div><br>
+                Adobe Photoshop<div id="progress-bar"><div class="my-bar"style="width: 70%;"></div></div><br>
+                Adobe Premiere<div id="progress-bar"><div class="my-bar"style="width: 65%;"></div></div><br>
+                <br style=“height:600px”;><br>
+
+            </div>
+    </div>
+
+    
+        <div id="box2">
+            <br style=“height:600px”;><br>
             <h3>Education</h3>
                 <h4>Georgia State University</h4>
-                Degree: Computer Science with a concentration in Software Development</br>
-                Minor: Korean Language and Culture</br>
-                Years Attended: 2014-2020</br>
-                Location: Atlanta, GA</br>
+                Degree: Computer Science with a concentration in Software Development<br>
+                Minor: Korean Language and Culture<br>
+                Relevant Coursework<br>
+                <li>Computer Organization</li>
+                <li>Data Structures</li>
+                <li>Programming Language Concepts</li>
+                <li>System-Level Programming</li>
+                <li>Web Programming</li>
 
                 <h4>Heritage High School</h4>
-                High School Diploma Obtained</br>
-                Years Attended: 2010-2014</br>
-                Location: Conyers, GA</br>
+                High School Diploma Obtained<br>
+                Years Attended: 2010-2014<br>
 
+            <br style=“height:800px”;><br>
+            <p><a href="contact.html"><b>Contact </a>me</b></p>
+            <div class="parallax"></div>
 
+        </div>
 
-        </p>
-        <br style=“height:800px”;></br>
-        <p><a href="contact.html"><b>Contact </a>me</b></p>
-
-    </div>
+    <script type="text/javascript">
+        window.onload = function onLoad(){
+    
+            var elem = document.getElementsByClassName("my-bar");  
+                var width = 0;
+                var id = setInterval(frame, 12);
+                function frame() {
+                if (width == 70) {
+                    clearInterval(id);
+                } else {
+                    width++; 
+                    elem.style.width = width + '%'; 
+                }
+                }
+            
+        }
+    </script>
+    
+    <script type="text/javascript">
+        function openNav() {
+          document.getElementById("myNav").style.width = "75%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
 
 </body>
 </html>
+

@@ -10,15 +10,18 @@
     <title>Portfolio</title>
 </head>
 <body>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
     <script src="animations.js"></script>
-    <div id="navMenu">
-    <ul>
-        <br style=“height:800px”;><br>
-        <li><a href="personal.html">About Me</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="gallery.html">Photography</a></li>
-        <li><a href="contact.html">Contact Me</a></li>
-    </ul>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+                <a href="personal.html">About Me</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="gallery.html">Photography</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
     </div> 
     
     <h1>Kahrin at a Glance</h1>
@@ -35,7 +38,7 @@
 
                 <h3 id="about1">About <svg xmlns="http://www.w3.org/2000/svg" id="plus1" padding-left:"40" height="24" viewBox="0 1.5 25 10" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></h3>
                 <div id="slideBox1">
-                    An 8-bit retro style side-scroller game where you play as Glib our adorable main character and you cautiously avoid enemies. Created using the Godot Game Engine with UI created by yours truly! 
+                    An 8-bit retro style side-scroller game where you play as Glib our adorable main character and you cautiously avoid enemies.<br> Created using the Godot Game Engine with UI created by yours truly! 
                 </div>
 
             <h3>Pomodoro Timer</h3> 
@@ -67,6 +70,16 @@
         <br style=“height:800px”;><br>
         <p><a href="contact.html"><b>Contact </a>me</b></p>
     </div>
+
+    <script type="text/javascript">
+        function openNav() {
+          document.getElementById("myNav").style.width = "75%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
 
 </body>
 </html>

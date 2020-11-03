@@ -9,16 +9,20 @@
     <title>Kahrin at a Glance</title>
 </head>
 
-<br> 
-        <div id="navMenu"> 
-                <ul>
-                    <br style=“height:800px”;><br>
-                    <li><a href="personal.html">About Me</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="gallery.html">Photography</a></li>
-                    <li><a href="contact.html">Contact Me</a></li>
-                </ul>
+<body>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+    <script src="animations.js"></script>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+                <a href="personal.html">About Me</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="gallery.html">Photography</a>
+                <a href="contact.html">Contact Me</a>
             </div>
+    </div> 
             <h1>Kahrin at a Glance</h1>
 
             <div id="box">
@@ -72,6 +76,15 @@
                 });
             </script>
 
+            <script type="text/javascript">
+                function openNav() {
+                  document.getElementById("myNav").style.width = "75%";
+                }
+                
+                function closeNav() {
+                  document.getElementById("myNav").style.width = "0%";
+                }
+            </script>
 
 </body>
 </html>
